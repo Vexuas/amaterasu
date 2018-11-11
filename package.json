@@ -1,0 +1,12 @@
+{
+  "name": "eternia",
+  "version": "1.0.0",
+  "description": "Eidolon Prayers Guide for Aura Kingdom",
+  "main": "eternia.js",
+  "author": "Vexuas",
+  "dependencies": {
+    "discord.io": "https://github.com/woor/discord.io/tarball/gateway_v6",
+    "discord.js": "^11.4.2",
+    "winston": "^3.1.0"
+  }
+}
