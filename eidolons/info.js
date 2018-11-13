@@ -1,7 +1,7 @@
 const embed = {
   "title": "Eternia || Info",
   "description": "Eidolon Prayers Guide For Aura Kingdom.\n Made on the sole intention to remind my lazy self to do them.\n[Full list of prayers](http://www.aurakingdom-db.com/charts/eidolon-wishes)\n[Invite Link](https://discordapp.com/oauth2/authorize?&client_id=510980011008983060&scope=bot&permissions=8)",
-  "color": 63999,
+  "color": 1493680,
   "thumbnail": {
     "url": "https://cdn.discordapp.com/attachments/248430185463021569/511047719851130890/discord_eternia.jpg"
   },

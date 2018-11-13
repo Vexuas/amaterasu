@@ -17,7 +17,7 @@ eternia.once('ready', () => {
 });
 
 eternia.on('ready', () => {
-  eternia.user.setActivity("$info for help || (~'-')~♥")
+  eternia.user.setActivity("$info for help | (~'-')~♥")
 });
 
 eternia.login(token);
