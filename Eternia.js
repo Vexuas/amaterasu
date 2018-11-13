@@ -16,6 +16,10 @@ client.once('ready', () => {
   console.log('Ready!');
 });
 
+client.on('ready', () => {
+  client.user.setActivity("$info for help || (~'-')~♥")
+});
+
 client.login(token);
 
 client.on('message', message => {
