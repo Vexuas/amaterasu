@@ -8,7 +8,7 @@ const embed = {
   "fields": [
     {
       "name": "List of Commands",
-      "value": "**$eidolons**  :  Displays all available Eidolons in the server.\n**$EidolonName**  :  Displays specific Eidolon prayers (e.g.: $Merrilee).\n**$dig**  :  Displays current day archaeology sites for specific Eidolons.\n**$fish** :  Displays current day fish kings for specific Eidolons."
+      "value": "**$eidolons**  :  Displays all available Eidolons in the server.\n**$EidolonName**  :  Displays specific Eidolon prayers (e.g.: $Merrilee).\n**$dig**  :  Displays current day archaeology sites for specific Eidolons.\n**$fish** :  Displays current day fish kings for specific Eidolons.\n**$stats** : Displays stats from prayers"
     },
     {
       "name": "Contact",
