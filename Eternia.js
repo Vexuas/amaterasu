@@ -23,7 +23,7 @@ eternia.on('ready', () => {
 eternia.login(token);
 
 eternia.on('message', message => {
-  if (!message.content === prefix) return;
+  if (!message.content.startsWith(prefix)) return;
 
   const args = message.content.slice(prefix.length).split(/ +/);
   const command = args.shift().toLowerCase();
