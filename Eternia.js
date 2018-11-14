@@ -28,7 +28,7 @@ eternia.on('message', message => {
   const args = message.content.slice(prefix.length).split(/ +/);
   const command = args.shift().toLowerCase();
 
-  if (!eternia.commands.has(command)) return message.channel.send("Master " + message.member.user.username + ", I'm not sure what you meant by that! （・□・；）");
+  if (!eternia.commands.has(command)) return message.channel.send("Master " + message.author.username + ", I'm not sure what you meant by that! （・□・；）");
   try {
     eternia.commands.get(command).execute(message, args);
   }
