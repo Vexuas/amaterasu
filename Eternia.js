@@ -20,15 +20,15 @@ eternia.on('ready', () => {
   eternia.user.setActivity("$info for help | (~'-')~♥")
 });
 
-eternia.login(token);
 
+eternia.login(token);
 eternia.on('message', message => {
   if (!message.content.startsWith(prefix)) return;
 
   const args = message.content.slice(prefix.length).split(/ +/);
   const command = args.shift().toLowerCase();
 
-  if (!eternia.commands.has(command)) return;
+  if (!eternia.commands.has(command)) return message.channel.send("Master " + message.member.user.username + ", I'm not sure what you meant by that! （・□・；）");
   try {
     eternia.commands.get(command).execute(message, args);
   }
