@@ -32,6 +32,6 @@ module.exports = {
   name: 'stats',
   description: 'prayer stats',
   execute(message, args) {
-    message.channel.send({ embed });
+    message.reply({ embed });
   },
 };
