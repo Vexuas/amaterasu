@@ -26,7 +26,7 @@ eternia.on('message', message => {
   if (message.content === "Rio's not here") return message.channel.send("R-really? She forced me to say it! She's actually so smol!! (๑•́ω•̀)");
   if (!message.content.startsWith(prefix)) return;
 
-  const args = message.content.slice(prefix.length).split(/ +/);
+  const args = message.content.slice(prefix.length).split();
   const command = args.shift().toLowerCase();
 
   if (!eternia.commands.has(command)) return message.channel.send("Master " + message.author.username + ", I'm not sure what you meant by that! （・□・；）");
