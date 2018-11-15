@@ -34,7 +34,7 @@ const embed = {
 };
 
 module.exports = {
-  name: 'tigerius',
+  name: 'tigerius caesar',
   description: 'tigerius prayers',
   execute(message, args) {
     message.channel.send({ embed });

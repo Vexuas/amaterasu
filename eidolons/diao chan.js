@@ -34,7 +34,7 @@ const embed = {
 };
 
 module.exports = {
-  name: 'diao',
+  name: 'diao chan',
   description: 'diao chan prayers',
   execute(message, args) {
     message.channel.send({ embed });

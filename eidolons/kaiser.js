@@ -34,7 +34,7 @@ const embed = {
 };
 
 module.exports = {
-  name: 'kaiser',
+  name: 'kaiser zeta',
   description: 'kaiser prayers',
   execute(message, args) {
     message.channel.send({ embed });
