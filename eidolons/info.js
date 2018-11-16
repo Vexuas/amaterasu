@@ -11,7 +11,7 @@ const embed = {
   "fields": [
     {
       "name": "List of Commands",
-      "value": "**$`info`** : Displays bot information.\n**$`invite`** : Generates invite link.\n**$`eidolons `**  :  Displays all available Eidolons in the server.\n**$`EidolonName`**  :  Displays Eidolon description. \n**$`prayers EidolonName`** : Displays specific Eidolon prayers.\n**$`dig`**  :  Displays current day archaeology sites for Eidolons.\n**$`dig Day`**  :  Displays specific day archaeology sites for Eidolons.\n**$`fish`** :  Displays current day fish kings for Eidolons.\n**$`fish Day`** :  Displays specific day fish kings for Eidolons.\n**$`spawns`** :  Displays dungeons that certain Eidolons spawn in.\n**$`stats`** : Displays stats from prayers.\n\n```fix\nType $ at the beginning of any command: $Merrilee, $prayers Merrilee, $stats .. ```"
+      "value": "**$`info`** : Displays bot information.\n**$`invite`** : Generates invite link.\n**$`eidolons `**  :  Displays all available Eidolons in the server.\n**$`EidolonName`**  :  Displays Eidolon description. \n**$`prayers EidolonName`** : Displays specific Eidolon prayers.\n**$`dig`**  :  Displays current day archaeology sites for Eidolons.\n**$`dig Day`**  :  Displays specific day archaeology sites for Eidolons.\n**$`fish`** :  Displays current day fish kings for Eidolons.\n**$`fish Day`** :  Displays specific day fish kings for Eidolons.\n**$`spawns`** :  Displays instances that certain Eidolons spawn in.\n**$`stats`** : Displays stats from prayers.\n\n```fix\nType $ at the beginning of any command: $Merrilee, $prayers Merrilee, $stats .. ```"
     }
   ]
 };
