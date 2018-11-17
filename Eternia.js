@@ -51,14 +51,52 @@ eternia.on('ready', () => {
 eternia.login(token);
 eternia.on('message', message => {
   //custom reactions
-  if (message.content === "Rio's not here") return message.channel.send("R-really? She forced me to say it! She's actually so smol!! (๑•́ω•̀)");
+  if (message.content.includes("Rio's not here")) {
+    message.channel.startTyping();
+    setTimeout(() => {
+      message.channel.send("R-really? She forced me to say it! She's actually so smol!! (๑•́ω•̀)");
+    });
+    return message.channel.stopTyping();
+  }
   if (message.author.username === "Vexuas" && message.content === "I love you " + eternia.user) {
-    message.channel.send("I love you too Master Vex! (˶◕‿◕˶✿)");
+    message.channel.startTyping();
+    setTimeout(() => {
+      message.channel.send("I love you too Master Vex! (˶◕‿◕˶✿)");
+    });
+    return message.channel.stopTyping();
+  } else if (message.author.username === "Catalina" && message.content === "" + eternia.user) {
+    message.channel.startTyping();
+    setTimeout(() => {
+      message.channel.send("");
+    });
+    return message.channel.stopTyping();
   } else if (message.author.username === "Rio" && message.content === "I love you " + eternia.user) {
-    message.channel.send("I love you too ArmRest-chan (˶◕‿◕˶✿)");
+    message.channel.startTyping();
+    setTimeout(() => {
+      message.channel.send("I love you too ArmRest-chan (˶◕‿◕˶✿)");
+    });
+    return message.channel.stopTyping();
   } else if (message.author.username !== "Vexuas" && message.author.username !== "Rio" && message.content === "I love you " + eternia.user) {
-    message.channel.send("U-uhh, thanks! You're nice too! （°o°；）");
+    message.channel.startTyping();
+    setTimeout(() => {
+      message.channel.send("U-uhh, thanks! You're nice too! （°o°；）");
+    });
+    return message.channel.stopTyping();
   };
+  if (message.content.includes("are you okay") || message.content.includes("are you alright") && message.content.includes(eternia.user)) {
+    message.channel.startTyping();
+    setTimeout(() => {
+      message.channel.send("Is anybody actually ever okay in this world?");
+    }, 2000);
+    return message.channel.stopTyping();
+  } else if (message.content.includes(eternia.user)) {
+    message.channel.startTyping();
+    setTimeout(() => {
+      message.channel.send("Eternia doesn't like being pinged, Master " + message.author.username + "!! (๑•̆૩•̆)");
+    }, 2000);
+    return message.channel.stopTyping();
+  }
+
 
   //If no $, do nothing
   if (!message.content.startsWith(prefix)) return;
@@ -102,7 +140,11 @@ eternia.on('message', message => {
       embed = saturdayD;
       embed.description = "Server Time: ` Saturday, " + ServerTime + "`";
     };
-    message.channel.send("Archaeology Prayer Sites Today " + message.author, { embed })
+    message.channel.startTyping();
+    setTimeout(() => {
+      message.channel.send("Archaeology Prayer Sites Today " + message.author, { embed })
+    }, 2000);
+    message.channel.stopTyping();
   };
 
   //fishing sites
@@ -115,7 +157,11 @@ eternia.on('message', message => {
       embed = mondayF;
       embed.description = "Server Time : ` Monday, " + ServerTime + "`";
     } else if (day === 2) {
-      message.channel.send("No Fish King Prayers Today (´･ᴗ･`)" + message.author);
+      message.channel.startTyping();
+      setTimeout(() => {
+        message.channel.send("No Fish King Prayers Today (´･ᴗ･`)" + message.author);
+      }, 2000);
+      message.channel.stopTyping();
     } else if (day === 3) {
       embed = wednesdayF;
       embed.description = "Server Time : ` Wednesday, " + ServerTime + "`";
@@ -129,7 +175,11 @@ eternia.on('message', message => {
       embed = saturdayF;
       embed.description = "Server Time: ` Saturday, " + ServerTime + "`";
     };
-    message.channel.send("Fish King Prayer Locations Today " + message.author, { embed })
+    message.channel.startTyping();
+    setTimeout(() => {
+      message.channel.send("Fish King Prayer Locations Today " + message.author, { embed });
+    }, 2000);
+    message.channel.stopTyping();
   };
 
   //get commands
@@ -140,7 +190,11 @@ eternia.on('message', message => {
   if (!eternia.commands.has(command)) return message.channel.send("Master " + message.author.username + ", I'm not sure what you meant by that! （・□・；）");
   //if it does, do command
   try {
-    eternia.commands.get(command).execute(message, args);
+    message.channel.startTyping();
+    setTimeout(() => {
+      eternia.commands.get(command).execute(message, args);
+    }, 2000);
+    return message.channel.stopTyping();
   }
   catch (error) {
     console.error(error);
