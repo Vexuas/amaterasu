@@ -50,50 +50,64 @@ eternia.on('ready', () => {
 
 eternia.login(token);
 eternia.on('message', message => {
-  //custom reactions
+  //custom reactions without @
   if (message.content.includes("Rio's not here")) {
     message.channel.startTyping();
     setTimeout(() => {
       message.channel.send("R-really? She forced me to say it! She's actually so smol!! (๑•́ω•̀)");
-    });
+    }, 1000);
     return message.channel.stopTyping();
   }
-  if (message.author.username === "Vexuas" && message.content === "I love you " + eternia.user) {
+  //custom reaction with @
+  if (message.author.username === "Vexuas" && message.content.includes("I love you") && message.content.includes(eternia.user)) {
     message.channel.startTyping();
     setTimeout(() => {
-      message.channel.send("I love you too Master Vex! (˶◕‿◕˶✿)");
-    });
+      message.channel.send("I love you too, Master Vex! (˶◕‿◕˶✿)");
+    }, 1000);
     return message.channel.stopTyping();
-  } else if (message.author.username === "Catalina" && message.content === "" + eternia.user) {
+  } else if (message.author.username === "Catalina" && message.content.includes(eternia.user)) {
     message.channel.startTyping();
     setTimeout(() => {
-      message.channel.send("");
-    });
+      message.channel.send("H-hi! I don't know what to say yet (๑•̆૩•̆)");
+    }, 1000);
     return message.channel.stopTyping();
-  } else if (message.author.username === "Rio" && message.content === "I love you " + eternia.user) {
+  } else if (message.author.username === "Rio" && message.content.includes("I love you") && message.content.includes(eternia.user)) {
     message.channel.startTyping();
     setTimeout(() => {
-      message.channel.send("I love you too ArmRest-chan (˶◕‿◕˶✿)");
-    });
+      message.channel.send("I love you too, ArmRest-chan (˶◕‿◕˶✿)");
+    }, 1000);
     return message.channel.stopTyping();
-  } else if (message.author.username !== "Vexuas" && message.author.username !== "Rio" && message.content === "I love you " + eternia.user) {
+  } else if (message.author.username !== "Vexuas" && message.author.username !== "Rio" && message.content.includes("I love you") && message.content.includes(eternia.user)) {
     message.channel.startTyping();
     setTimeout(() => {
       message.channel.send("U-uhh, thanks! You're nice too! （°o°；）");
-    });
+    }, 1000);
     return message.channel.stopTyping();
   };
+
   if (message.content.includes("are you okay") || message.content.includes("are you alright") && message.content.includes(eternia.user)) {
     message.channel.startTyping();
     setTimeout(() => {
-      message.channel.send("Is anybody actually ever okay in this world?");
-    }, 2000);
+      message.channel.send("Is anybody actually ever okay in this world? (◕︿◕✿)");
+    }, 1000);
+    return message.channel.stopTyping();
+  } else if (message.content.includes("sorry") || message.content.includes("apologise") && message.content.includes(eternia.user)) {
+    message.channel.startTyping();
+    setTimeout(() => {
+      message.channel.send("It's okay Master " + message.author.username + ", I forgive you. （；・д・）");
+    }, 1000);
+    return message.channel.stopTyping();
+  } else if (message.content.includes("thank you") || message.content.includes("thanks") && message.content.includes(eternia.user)) {
+    message.channel.startTyping();
+    setTimeout(() => {
+      message.channel.send("You're nice, Master " + message.author.username + ". (๑>ᴗ<๑)");
+    }, 1000);
     return message.channel.stopTyping();
   } else if (message.content.includes(eternia.user)) {
     message.channel.startTyping();
     setTimeout(() => {
       message.channel.send("Eternia doesn't like being pinged, Master " + message.author.username + "!! (๑•̆૩•̆)");
-    }, 2000);
+    }, 1000);
     return message.channel.stopTyping();
   }
 
@@ -143,7 +157,7 @@ eternia.on('message', message => {
     message.channel.startTyping();
     setTimeout(() => {
       message.channel.send("Archaeology Prayer Sites Today " + message.author, { embed })
-    }, 2000);
+    }, 1000);
     message.channel.stopTyping();
   };
 
@@ -160,7 +174,7 @@ eternia.on('message', message => {
       message.channel.startTyping();
       setTimeout(() => {
         message.channel.send("No Fish King Prayers Today (´･ᴗ･`)" + message.author);
-      }, 2000);
+      }, 1000);
       message.channel.stopTyping();
     } else if (day === 3) {
       embed = wednesdayF;
@@ -178,7 +192,7 @@ eternia.on('message', message => {
     message.channel.startTyping();
     setTimeout(() => {
       message.channel.send("Fish King Prayer Locations Today " + message.author, { embed });
-    }, 2000);
+    }, 1000);
     message.channel.stopTyping();
   };
 
@@ -193,7 +207,7 @@ eternia.on('message', message => {
     message.channel.startTyping();
     setTimeout(() => {
       eternia.commands.get(command).execute(message, args);
-    }, 2000);
+    }, 1000);
     return message.channel.stopTyping();
   }
   catch (error) {
