@@ -16,12 +16,12 @@ const embed = {
     },
     {
       "name": "Abraxas",
-      "value": "```fix\n• 2nd & 6th Wish       \n• Oblitus Wood ,\n  Starstruck Plateau\n• 1PM, 5PM```",
+      "value": "```fix\n• 2nd & 6th Wish       \n• Oblitus Wood,\n  Starstruck Plateau\n• 1PM, 5PM```",
       "inline": true
     },
     {
       "name": "Shirayuki",
-      "value": "```fix\n• 5th Wish             \n• Helonia Coast ,\n  Ventos Prairie\n• 1PM, 5PM```",
+      "value": "```fix\n• 5th Wish             \n• Helonia Coast,\n  Ventos Prairie\n• 1PM, 5PM```",
       "inline": true
     },
     {
@@ -56,7 +56,7 @@ const embed = {
     },
     {
       "name": "Dante",
-      "value": "```fix\n• 5th & 6th Wish       \n• Silent Ice Field ,\n  Starstruck Plateau\n• 1PM, 5PM```",
+      "value": "```fix\n• 5th & 6th Wish       \n• Silent Ice Field,\n  Starstruck Plateau\n• 1PM, 5PM```",
       "inline": true
     },
     {
