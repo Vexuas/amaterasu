@@ -59,10 +59,10 @@ eternia.on('message', message => {
     return message.channel.stopTyping();
   }
   //custom reaction with @
-  if (message.author.username === "Vexuas" && message.content.includes("I love you") && message.content.includes(eternia.user)) {
+  if (message.author.username === "Vexuas" && message.content.includes(eternia.user)) {
     message.channel.startTyping();
     setTimeout(() => {
-      message.channel.send("I love you too, Master Vex! (˶◕‿◕˶✿)");
+      message.channel.send("Hi hi, Master Vex! (˶◕‿◕˶✿)");
     }, 1000);
     return message.channel.stopTyping();
   } else if (message.author.username === "Catalina" && message.content.includes(eternia.user)) {
@@ -71,13 +71,13 @@ eternia.on('message', message => {
       message.channel.send("H-hi! I don't know what to say yet (๑•̆૩•̆)");
     }, 1000);
     return message.channel.stopTyping();
-  } else if (message.author.username === "Rio" && message.content.includes("I love you") && message.content.includes(eternia.user)) {
+  } else if (message.author.username === "Rio" && message.content.includes(eternia.user)) {
     message.channel.startTyping();
     setTimeout(() => {
-      message.channel.send("I love you too, ArmRest-chan (˶◕‿◕˶✿)");
+      message.channel.send("Oh hello, ArmRest-chan (˶◕‿◕˶✿)");
     }, 1000);
     return message.channel.stopTyping();
-  } else if (message.author.username !== "Vexuas" && message.author.username !== "Rio" && message.content.includes("I love you") && message.content.includes(eternia.user)) {
+  } else if (message.author.username !== "Vexuas" && message.content.includes("I love you") && message.content.includes(eternia.user)) {
     message.channel.startTyping();
     setTimeout(() => {
       message.channel.send("U-uhh, thanks! You're nice too! （°o°；）");
