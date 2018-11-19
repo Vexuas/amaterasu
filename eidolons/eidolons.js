@@ -1,5 +1,5 @@
 const embed = {
-  "description": "There are currently 67 Eidolons in Aura Kingdom OS",
+  "description": "There are currently [67](http://www.aurakingdom-db.com/eidolons) Eidolons in Aura Kingdom OS",
   "color": 1493680,
   "fields": [
     {
