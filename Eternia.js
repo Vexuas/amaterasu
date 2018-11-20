@@ -59,7 +59,7 @@ eternia.on('message', message => {
     return message.channel.stopTyping();
   }
   //custom reaction with @
-  if (message.author.username === "Vexuas" && message.content.includes(eternia.user)) {
+  if (message.author.username === "Vexuas" && message.content.includes("hello") || message.content.includes("hi") && message.content.includes(eternia.user)) {
     message.channel.startTyping();
     setTimeout(() => {
       message.channel.send("Hi hi, Master Vex! (˶◕‿◕˶✿)");
@@ -71,7 +71,7 @@ eternia.on('message', message => {
       message.channel.send("H-hi! I don't know what to say yet (๑•̆૩•̆)");
     }, 1000);
     return message.channel.stopTyping();
-  } else if (message.author.username === "Rio" && message.content.includes(eternia.user)) {
+  } else if (message.author.username === "Rio" && message.content.includes("hello") || message.content.includes("hi") && message.content.includes(eternia.user)) {
     message.channel.startTyping();
     setTimeout(() => {
       message.channel.send("Oh hello, ArmRest-chan (˶◕‿◕˶✿)");
@@ -173,9 +173,9 @@ eternia.on('message', message => {
     } else if (day === 2) {
       message.channel.startTyping();
       setTimeout(() => {
-        message.channel.send("No Fish King Prayers Today (´･ᴗ･`)" + message.author);
+        message.channel.send("No Fish King Prayers Today (´･ᴗ･`) " + message.author);
       }, 1000);
-      message.channel.stopTyping();
+      return message.channel.stopTyping();
     } else if (day === 3) {
       embed = wednesdayF;
       embed.description = "Server Time : ` Wednesday, " + ServerTime + "`";
