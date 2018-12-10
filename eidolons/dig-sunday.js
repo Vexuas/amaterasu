@@ -3,7 +3,13 @@ const embed = {
   "fields": [
     {
       "name": "Ayako",
-      "value": "```fix\n• 6th Wish             \n• Silent Ice Field\n• Blue```"
+      "value": "```fix\n• 6th Wish             \n• Silent Ice Field\n• Blue```",
+      "inline": true
+    },
+    {
+      "name": "Hermes",
+      "value": "```fix\n• 5th Wish             \n• Desolate Valley\n• Red```",
+      "inline": true
     },
     {
       "name": "Grimm",

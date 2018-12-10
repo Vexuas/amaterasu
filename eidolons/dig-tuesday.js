@@ -16,7 +16,7 @@ const embed = {
     },
     {
       "name": "Benkei & Yumikaze",
-      "value": "```fix\n• 6th Wish             \n• Rainmist Reach\n• Yellow```",
+      "value": "```fix\n• 4th & 6th Wish       \n• Rainmist Reach\n• Yellow```",
       "inline": true
     },
     {

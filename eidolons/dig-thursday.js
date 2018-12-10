@@ -3,7 +3,13 @@ const embed = {
   "fields": [
     {
       "name": "Hebe",
-      "value": "```fix\n• 1st Wish             \n• Crescent Hill, Vulture's Vale\n• Red```"
+      "value": "```fix\n• 1st Wish             \n• Crescent Hill,\n  Vulture's Vale\n• Red```",
+      "inline": true
+    },
+    {
+      "name": "Santa Ayako",
+      "value": "```fix\n• 6th Wish             \n• Crescent Hill,\n  Vulture's Vale\n• Blue```",
+      "inline": true
     },
     {
       "name": "Aelius, Benkei & Kitami",

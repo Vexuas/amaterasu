@@ -2,17 +2,17 @@ const embed = {
   "color": 1493680,
   "fields": [
     {
+      "name": "Verdandi, Michaela, Hades & Hermes",
+      "value": "```fix\n• 5th Wish             \n• Emerald Marsh\n• Blue```"
+    },
+    {
       "name": "Abraxas",
-      "value": "```fix\n• 1st Wish             \n• Cactakara Forest\n• Red```"
+      "value": "```fix\n• 1st Wish             \n• Cactakara Forest\n• Red```",
+      "inline": true
     },
     {
       "name": "Aelius, Benkei & Kitami",
       "value": "```fix\n• 4th & 6th Wish       \n• Ventos Prairie\n• Red```",
-      "inline": true
-    },
-    {
-      "name": "Verdandi, Michaela & Hades",
-      "value": "```fix\n• 5th Wish             \n• Emerald Marsh\n• Blue```",
       "inline": true
     },
     {

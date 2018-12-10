@@ -5,7 +5,7 @@ const embed = {
   },
   "fields": [
     {
-      "name": "Abraxas, Dante & Kitami",
+      "name": "Abraxas, Dante, Hermes & Kitami",
       "value": "```fix\n• 4th & 6th Wish\n• Starstruck Plateau\n• 5AM, 1PM, 9PM```"
     },
     {

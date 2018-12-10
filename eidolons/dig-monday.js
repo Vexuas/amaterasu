@@ -3,7 +3,13 @@ const embed = {
   "fields": [
     {
       "name": "Diao Chan",
-      "value": "```fix\n• 5th Wish             \n• Emerald Marsh, Frigga Peak\n• Blue```"
+      "value": "```fix\n• 5th Wish             \n• Emerald Marsh,\n  Frigga Peak\n• Blue```",
+      "inline": true
+    },
+    {
+      "name": "Santa Ayako",
+      "value": "```fix\n• 6th Wish             \n• Candeo Marsh\n• Blue```",
+      "inline": true
     },
     {
       "name": "Grimm",

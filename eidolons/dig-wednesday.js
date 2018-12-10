@@ -16,8 +16,8 @@ const embed = {
       "inline": true
     },
     {
-      "name": "Nazrudin",
-      "value": "```fix\n• 4th Wish             \n• Cactakara Forest\n• Blue```",
+      "name": "Nazrudin & Santa Ayako",
+      "value": "```fix\n• 4th Wish & 6th Wish  \n• Cactakara Forest\n• Blue```",
       "inline": true
     },
     {
@@ -67,7 +67,6 @@ const embed = {
     }
   ]
 };
-
 
 module.exports = {
   name: 'dig wednesday',
