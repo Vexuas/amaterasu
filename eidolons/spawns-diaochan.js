@@ -1,21 +1,23 @@
 const embed = {
-  "description": "Diao Chan Spawns",
-  "color": 1493680,
-  "thumbnail": {
-    "url": "http://cdn.aurakingdom-db.com/images/icons/P00042.jpg"
+  description: "Diao Chan Spawns",
+  color: 1493680,
+  thumbnail: {
+    url: "http://cdn.aurakingdom-db.com/images/icons/P00042.jpg"
   },
-  "fields": [
+  fields: [
     {
-      "name": "Instances",
-      "value": "```css\n• Otherworld: Titan's Root [Party/Hell]\n• Otherworld: Cadilla Felwood [Party/Hell]\n• Frozen Ruins of Zahr-Kazaal                      ```"
+      name: "Instances",
+      value:
+        "```css\n• Otherworld: Titan's Root [Party/Hell]\n• Otherworld: Cadilla Felwood [Party/Hell]\n• Frozen Ruins of Zahr-Kazaal                      ```"
     }
   ]
 };
 
 module.exports = {
-  name: 'spawns diao chan',
-  description: 'diao chan spawns',
+  name: "spawns diao chan",
+  description: "diao chan spawns",
   execute(message, args) {
-    message.reply({ embed })
-  },
+    embed.description = `${message.author} | Diao Chan Spawns`;
+    message.channel.send({ embed });
+  }
 };

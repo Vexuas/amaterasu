@@ -1,21 +1,23 @@
 const embed = {
-  "description": "Kaiser Zeta Spawns",
-  "color": 1493680,
-  "thumbnail": {
-    "url": "http://cdn.aurakingdom-db.com/images/icons/P00034.jpg"
+  description: "Kaiser Zeta Spawns",
+  color: 1493680,
+  thumbnail: {
+    url: "http://cdn.aurakingdom-db.com/images/icons/P00034.jpg"
   },
-  "fields": [
+  fields: [
     {
-      "name": "Instances",
-      "value": "```css\n• Otherworld: Deep's Cavern [Party]\n• Otherworld: Candeo Core [Party]\n• Titan's Root [Hell]\n• Cadilla Felwood [Hell]\n• Tempestuous Temple\n• Pyroclastic Purgatory                      ```"
+      name: "Instances",
+      value:
+        "```css\n• Otherworld: Deep's Cavern [Party]\n• Otherworld: Candeo Core [Party]\n• Titan's Root [Hell]\n• Cadilla Felwood [Hell]\n• Tempestuous Temple\n• Pyroclastic Purgatory                      ```"
     }
   ]
 };
 
 module.exports = {
-  name: 'spawns kaiser zeta',
-  description: 'kaiser zeta spawns',
+  name: "spawns kaiser zeta",
+  description: "kaiser zeta spawns",
   execute(message, args) {
-    message.reply({ embed })
-  },
+    embed.description = `${message.author} | Kaiser Zeta Spawns`;
+    message.channel.send({ embed });
+  }
 };
