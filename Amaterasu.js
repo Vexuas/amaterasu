@@ -52,7 +52,7 @@ const activitylist = [
   "checkout Yagi for wb times!"
 ];
 amaterasu.on("ready", () => {
-  amaterasu.user.setActivity(activitylist[3]);
+  amaterasu.user.setActivity(activitylist[0]);
   amaterasu.users.forEach(item => {
     console.log(item.username);
   });
