@@ -2,6 +2,7 @@
 
 # dependencies
 node_modules
+.DS_store
 
 #config
 config.json
