@@ -11,6 +11,7 @@ const eidolons = [
   `Bealdor`,
   `Bel-Chandra`,
   `Benkei`,
+  `Cerberus`,
   `Cesela`,
   `Cleopawtra`,
   `Cyril`,
@@ -46,6 +47,7 @@ const eidolons = [
   `Muse`,
   `Nalani`,
   `Nazrudin`,
+  `Nidhogg`,
   `Pandora`,
   `Quelkulan`,
   `Santa Ayako`,
@@ -79,7 +81,7 @@ module.exports = {
     const embed = {
       description: `${
         message.author
-      } | There are currently [72](http://www.aurakingdom-db.com/eidolons) Eidolons available in Aura Kingdom OS`,
+      } | There are currently [74](http://www.aurakingdom-db.com/eidolons) Eidolons available in Aura Kingdom OS`,
       color: 1493680,
       fields: [
         {
