@@ -2,9 +2,9 @@ const embed = {
   color: 1493680,
   fields: [
     {
-      name: "Diao Chan",
+      name: "Cerberus & Diao Chan",
       value:
-        "```fix\n• 5th Wish             \n• Emerald Marsh,\n  Frigga Peak\n• Blue```",
+        "```fix\n• 2nd & 5th Wish       \n• Emerald Marsh,\n  Frigga Peak\n• Blue```",
       inline: true
     },
     {
