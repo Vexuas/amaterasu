@@ -42,7 +42,7 @@ const embed = {
       inline: true
     },
     {
-      name: "Idun & Zephyrine",
+      name: "Idun, Nidhogg & Zephyrine",
       value: "```fix\n• 6th Wish             \n• Cactakara Forest\n• Blue```",
       inline: true
     },
@@ -52,7 +52,7 @@ const embed = {
       inline: true
     },
     {
-      name: "Muramasa",
+      name: "Muramasa & Nidhogg",
       value: "```fix\n• 2nd Wish             \n• Cactakara Forest\n• Yellow```",
       inline: true
     }
