@@ -15,7 +15,7 @@ const embed = {
     {
       name: "List of Commands",
       value:
-        "**$`info`** : Displays bot information.\n**$`invite`** : Generates invite link.\n**$`eidolons `**  :  Displays all available Eidolons in the server.\n**$`EidolonName`**  :  Displays Eidolon information. \n**$`prayers EidolonName`** : Displays specific Eidolon prayers.\n**$`dig`**  :  Displays current day archaeology sites for Eidolons.\n**$`dig Day`**  :  Displays specific day archaeology sites for Eidolons.\n**$`fish`** :  Displays current day fish kings for Eidolons.\n**$`fish Day`** :  Displays specific day fish kings for Eidolons.\n**$`spawns`** :  Displays Eidolons that can spawn in instances.\n**$`spawns EidolonName`** :  Displays instances of specific Eidolons.\n**$`stats`** : Displays stats from prayers."
+        "**$`info`** : Displays bot information.\n**$`invite`** : Generates invite link.\n**$`eidolons `**  :  Displays all available Eidolons in the server.\n**$`EidolonName`**  :  Displays Eidolon information. \n**$`prayers EidolonName`** : Displays specific Eidolon prayers.\n**$`dig`**  :  Displays current day archaeology sites for Eidolons.\n**$`dig Day`**  :  Displays specific day archaeology sites for Eidolons.\n**$`fish`** :  Displays current day fish kings for Eidolons.\n**$`fish Day`** :  Displays specific day fish kings for Eidolons.\n**$`spawns`** :  Displays Eidolons that can spawn in instances.\n**$`spawns EidolonName`** :  Displays instances of specific Eidolons.\n**$`stats`** : Displays stats from prayers.\n**$`release`** : Displays current release changelog."
     },
     {
       name: "Bot Links",
