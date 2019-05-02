@@ -16,3 +16,4 @@ My first Discord Bot and made it for the sole reason to push myself to do Eidolo
 **`$spawns`** : Displays Eidolons that can spawn in instances<br />
 **`$spawns EidolonName`** : Displays instances of specific Eidolons<br />
 **`$stats`** : Displays stats from prayers<br />
+**`$release`** : Displays current release changelog<br />
