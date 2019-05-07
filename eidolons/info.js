@@ -7,10 +7,6 @@ const embed = {
     url:
       "https://cdn.discordapp.com/attachments/535291698046042112/543825946977763348/Amaterasu-new.png"
   },
-  footer: {
-    text:
-      "If you happen to find missing eidolons/items or mistakes in general, feel free to message me at Vexuas#8141 or contact me through the AKUS discord  (´･ᴗ･`)"
-  },
   fields: [
     {
       name: "List of Commands",
