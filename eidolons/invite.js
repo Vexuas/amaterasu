@@ -5,7 +5,7 @@ module.exports = {
     const embed = {
       description: `${
         message.author
-      } | [Add me to your servers! (๑>ᴗ<๑)](https://tinyurl.com/ak-goats-bot)`,
+      } | [Add me to your servers! (๑>ᴗ<๑)](https://tinyurl.com/ak-eidolons-bot)`,
       color: 1493680
     };
     message.channel.send({ embed });
