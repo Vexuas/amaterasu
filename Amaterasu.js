@@ -46,7 +46,7 @@ amaterasu.once("ready", () => {
 
 const activitylist = [
   "$info for help | (~'-')~♥",
-  "Last update: 12/05/2019",
+  "Last update: 18/05/2019",
   "$eidolons for full eido list",
   "Eternia coming soon (๑•́ω•̀)",
   "checkout Yagi for wb times!"

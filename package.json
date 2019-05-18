@@ -1,8 +1,8 @@
 {
-  "name": "eternia",
-  "version": "1.0.0",
-  "description": "Eidolon Prayers Guide for Aura Kingdom",
-  "main": "eternia.js",
+  "name": "amaterasu",
+  "version": "1.77",
+  "description": "Eidolon Bot for Aura Kingdom",
+  "main": "Amaterasu.js",
   "author": "Vexuas",
   "dependencies": {
     "discord.io": "https://github.com/woor/discord.io/tarball/gateway_v6",
