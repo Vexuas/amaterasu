@@ -5,7 +5,7 @@ const embed = {
     {
       name: "Eidolons Available",
       value:
-        "• `Tigerius Caesar` • `Kotonoha` • `Bahadur` • `Yarnaros` • `Quelkulan` • `Vayu` \n• `Nazrudin` • `Uzuriel` • `Bel-Chandra` • `Sigrun` • `Eligos` • `Aelius` • `Serena` \n• `Tsubaki` • `Gigas` • `Endora` • `Vermilion` • `Shirayuki` • `Kaiser Zeta` \n• `Kusanagi` • `Hansel and Gretel` • `Ghodroon` • `Diao Chan` • `Uriel` \n• `Amaterasu` • `Nalani` • `Alice` • `Ayako` • `Yumikaze` • `Zephyrine` • `Harmonia` • `Dante`"
+        "• `Tigerius Caesar` • `Kotonoha` • `Bahadur` • `Yarnaros` • `Quelkulan` • `Vayu` \n• `Nazrudin` • `Uzuriel` • `Bel-Chandra` • `Sigrun` • `Eligos` • `Aelius` • `Serena` \n• `Tsubaki` • `Gigas` • `Endora` • `Vermilion` • `Shirayuki` • `Kaiser Zeta` \n• `Kusanagi` • `Hansel and Gretel` • `Ghodroon` • `Diao Chan` • `Uriel` \n• `Amaterasu` • `Nalani` • `Alice` • `Ayako` • `Yumikaze` • `Zephyrine` • `Harmonia` \n• `Dante` • `Muse` • `Zashi`"
     }
   ]
 };
