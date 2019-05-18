@@ -53,9 +53,20 @@ const activitylist = [
 ];
 amaterasu.on("ready", () => {
   amaterasu.user.setActivity(activitylist[0]);
-  amaterasu.users.forEach(item => {
+  /*amaterasu.users.forEach(item => {
     console.log(item.username);
+  });*/
+  let channel = amaterasu.channels.get("491832593529045003");
+  let guildsArray = [];
+  amaterasu.guilds.forEach(item => {
+    guildsArray.push(item);
+    console.log(`${item.name} - ${item.region} : ${item.memberCount}`);
   });
+  /*amaterasu.channels.forEach(item => {
+    console.log(item.name);
+  });*/
+
+  channel.send(guildsArray);
   setInterval(() => {
     const index = Math.floor(Math.random() * (activitylist.length - 1) + 1);
     amaterasu.user.setActivity(activitylist[index]);
