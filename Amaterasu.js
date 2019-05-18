@@ -30,6 +30,11 @@ const saturdayF = satFish.day;
 
 const amaterasu = new Discord.Client();
 amaterasu.commands = new Discord.Collection();
+const DBL = require("dblapi.js");
+const dbl = new DBL(
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjUxMDk4MDAxMTAwODk4MzA2MCIsImJvdCI6dHJ1ZSwiaWF0IjoxNTU3OTc3MjQzfQ.cgz-ovMrHfjwIZ5SudwzpUjlTpT5X-YYXC12UT4DrR8",
+  amaterasu
+);
 
 const commandFiles = fs
   .readdirSync("./eidolons")
@@ -51,26 +56,34 @@ const activitylist = [
   "Eternia coming soon (๑•́ω•̀)",
   "checkout Yagi for wb times!"
 ];
+// REMINDER TO REFACTOR ALL THIS BEFORE Q3 2019 CUZ THIS IS A CLUSTERFCK RIGHT NOW
 amaterasu.on("ready", () => {
   amaterasu.user.setActivity(activitylist[0]);
-  /*amaterasu.users.forEach(item => {
-    console.log(item.username);
-  });*/
-  let channel = amaterasu.channels.get("491832593529045003");
+  let gaychat = amaterasu.channels.get("188682169495977984"); //Gayhouse - gaychat
+  let amahell = amaterasu.channels.get("578465727099568149"); //Amaterasu - amaterasu-hell
   let guildsArray = [];
   amaterasu.guilds.forEach(item => {
     guildsArray.push(item);
-    console.log(`${item.name} - ${item.region} : ${item.memberCount}`);
+    console.log(`${item.name} - ${item.region} : ${item.memberCount}`); //Server list details
   });
-  /*amaterasu.channels.forEach(item => {
-    console.log(item.name);
+  amaterasu.channels.forEach(chan => {
+    console.log(chan.id + " : " + chan.name); // Channels + Id List
+  });
+  amahell.send(guildsArray); // Send Server list to bot server
+  /*amaterasu.users.forEach(item => {
+    console.log(item.username); //Users List
   });*/
-
-  channel.send(guildsArray);
+  /*amaterasu.channels.forEach(item => {
+    console.log(item.name); //Channels List
+  });*/
   setInterval(() => {
     const index = Math.floor(Math.random() * (activitylist.length - 1) + 1);
     amaterasu.user.setActivity(activitylist[index]);
   }, 120000);
+  //DiscordBot List server count
+  setInterval(() => {
+    dbl.postStats(amaterasu.guilds.size);
+  }, 1200000);
 });
 
 amaterasu.login(token);
