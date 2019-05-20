@@ -1,6 +1,6 @@
 const fs = require("fs");
 const Discord = require("discord.js");
-const { prefix, token } = require("./config.json");
+const { prefix, token, dbltoken } = require("./config.json");
 const sunDig = require("./eidolons/dig-sunday");
 const monDig = require("./eidolons/dig-monday");
 const tueDig = require("./eidolons/dig-tuesday");
@@ -31,10 +31,7 @@ const saturdayF = satFish.day;
 const amaterasu = new Discord.Client();
 amaterasu.commands = new Discord.Collection();
 const DBL = require("dblapi.js");
-const dbl = new DBL(
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjUxMDk4MDAxMTAwODk4MzA2MCIsImJvdCI6dHJ1ZSwiaWF0IjoxNTU3OTc3MjQzfQ.cgz-ovMrHfjwIZ5SudwzpUjlTpT5X-YYXC12UT4DrR8",
-  amaterasu
-);
+const dbl = new DBL(dbltoken, amaterasu);
 
 const commandFiles = fs
   .readdirSync("./eidolons")
