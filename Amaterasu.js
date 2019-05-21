@@ -75,7 +75,7 @@ amaterasu.on("ready", () => {
     console.log(`${item.name} - ${item.region} : ${item.memberCount}`); //Server list details
   });
 
-  amahell.send(guildsArray); // Send Server list to bot server
+  //amahell.send(guildsArray); // Send Server list to bot server
   /*amaterasu.users.forEach(item => {
     console.log(item.username); //Users List
   });*/
