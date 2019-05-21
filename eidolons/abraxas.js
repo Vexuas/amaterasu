@@ -20,6 +20,6 @@ module.exports = {
   name: "abraxas",
   description: "abraxas info",
   execute(message, args) {
-    message.channel({ embed });
+    message.channel.send({ embed });
   }
 };
