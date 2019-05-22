@@ -29,6 +29,7 @@ const fridayF = friFish.day;
 const saturdayF = satFish.day;
 
 const amaterasu = new Discord.Client();
+module.exports.amaterasu = amaterasu;
 amaterasu.commands = new Discord.Collection();
 const DBL = require("dblapi.js");
 const dbl = new DBL(dbltoken, amaterasu);
@@ -88,7 +89,7 @@ amaterasu.on("ready", () => {
   }, 120000);
   //DiscordBot List server count
   setInterval(() => {
-    dbl.postStats(amaterasu.guilds.size);
+    //dbl.postStats(amaterasu.guilds.size);
   }, 1200000);
 });
 
