@@ -2,6 +2,10 @@ const embed = {
   color: 1493680,
   fields: [
     {
+      name: "Aelius, Benkei & Kitami",
+      value: "```fix\n• 4th & 6th Wish       \n• Star Sand Desert\n• Red```"
+    },
+    {
       name: "Hebe",
       value:
         "```fix\n• 1st Wish             \n• Crescent Hill,\n  Vulture's Vale\n• Red```",
@@ -14,8 +18,9 @@ const embed = {
       inline: true
     },
     {
-      name: "Aelius, Benkei & Kitami",
-      value: "```fix\n• 4th & 6th Wish       \n• Star Sand Desert\n• Red```",
+      name: "Qingniao",
+      value:
+        "```fix\n• 1st Wish              \n• Star Sand Desert\n• Yellow```",
       inline: true
     },
     {

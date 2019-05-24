@@ -4,7 +4,11 @@ const embed = {
     {
       name: "Cerberus & Diao Chan",
       value:
-        "```fix\n• 2nd & 5th Wish       \n• Emerald Marsh,\n  Frigga Peak\n• Blue```",
+        "```fix\n• 2nd & 5th Wish       \n• Emerald Marsh,\n  Frigga Peak\n• Blue```"
+    },
+    {
+      name: "Qingniao",
+      value: "```fix\n• 1st Wish              \n• Port Skandia\n• Yellow```",
       inline: true
     },
     {
