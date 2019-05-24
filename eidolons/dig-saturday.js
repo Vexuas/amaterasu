@@ -3,7 +3,13 @@ const embed = {
   fields: [
     {
       name: "Verdandi, Michaela, Hades & Hermes",
-      value: "```fix\n• 5th Wish             \n• Emerald Marsh\n• Blue```"
+      value: "```fix\n• 5th Wish             \n• Emerald Marsh\n• Blue```",
+      inline: true
+    },
+    {
+      name: "Qingniao",
+      value: "```fix\n• 1st Wish              \n• Ventos Prairie\n• Yellow```",
+      inline: true
     },
     {
       name: "Abraxas",

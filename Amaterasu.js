@@ -57,8 +57,6 @@ const activitylist = [
 amaterasu.on("ready", () => {
   amaterasu.user.setActivity(activitylist[0]);
   let gaychat = amaterasu.channels.get("188682169495977984"); //Gayhouse - gaychat
-  let amahell = amaterasu.channels.get("578465727099568149"); //Amaterasu - amaterasu-hell
-  let guildsArray = [];
   amaterasu.channels.forEach(chan => {
     console.log(chan.id + " : " + chan.name); // Channels + Id List
   });
@@ -71,11 +69,8 @@ amaterasu.on("ready", () => {
     console.log(item.username);
   });
   amaterasu.guilds.forEach(item => {
-    guildsArray.push(item);
     console.log(`${item.name} - ${item.region} : ${item.memberCount}`); //Server list details
   });
-
-  amahell.send(guildsArray); // Send Server list to bot server
   /*amaterasu.users.forEach(item => {
     console.log(item.username); //Users List
   });*/
@@ -88,7 +83,7 @@ amaterasu.on("ready", () => {
   }, 120000);
   //DiscordBot List server count
   setInterval(() => {
-    dbl.postStats(amaterasu.guilds.size);
+    //dbl.postStats(amaterasu.guilds.size);
   }, 1200000);
 });
 
