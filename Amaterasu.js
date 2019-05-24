@@ -1,6 +1,6 @@
 const fs = require("fs");
 const Discord = require("discord.js");
-const { prefix, token } = require("./config.json");
+const { prefix, token, dbltoken } = require("./config.json");
 const sunDig = require("./eidolons/dig-sunday");
 const monDig = require("./eidolons/dig-monday");
 const tueDig = require("./eidolons/dig-tuesday");
@@ -30,6 +30,8 @@ const saturdayF = satFish.day;
 
 const amaterasu = new Discord.Client();
 amaterasu.commands = new Discord.Collection();
+const DBL = require("dblapi.js");
+const dbl = new DBL(dbltoken, amaterasu);
 
 const commandFiles = fs
   .readdirSync("./eidolons")
@@ -46,20 +48,43 @@ amaterasu.once("ready", () => {
 
 const activitylist = [
   "$info for help | (~'-')~♥",
-  "Last update: 21/05/2019",
+  "Last update: 25/05/2019",
   "$eidolons for full eido list",
   "Eternia coming soon (๑•́ω•̀)",
   "checkout Yagi for wb times!"
 ];
+// REMINDER TO REFACTOR ALL THIS BEFORE Q3 2019 CUZ THIS IS A CLUSTERFCK RIGHT NOW
 amaterasu.on("ready", () => {
   amaterasu.user.setActivity(activitylist[0]);
+  let gaychat = amaterasu.channels.get("188682169495977984"); //Gayhouse - gaychat
+  amaterasu.channels.forEach(chan => {
+    console.log(chan.id + " : " + chan.name); // Channels + Id List
+  });
+  let count = 0;
   amaterasu.users.forEach(item => {
+    count++;
+    if (count > 100) {
+      return;
+    }
     console.log(item.username);
   });
+  amaterasu.guilds.forEach(item => {
+    console.log(`${item.name} - ${item.region} : ${item.memberCount}`); //Server list details
+  });
+  /*amaterasu.users.forEach(item => {
+    console.log(item.username); //Users List
+  });*/
+  /*amaterasu.channels.forEach(item => {
+    console.log(item.name); //Channels List
+  });*/
   setInterval(() => {
     const index = Math.floor(Math.random() * (activitylist.length - 1) + 1);
     amaterasu.user.setActivity(activitylist[index]);
   }, 120000);
+  //DiscordBot List server count
+  setInterval(() => {
+    dbl.postStats(amaterasu.guilds.size);
+  }, 1200000);
 });
 
 amaterasu.login(token);
