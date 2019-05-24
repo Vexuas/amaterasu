@@ -48,7 +48,7 @@ amaterasu.once("ready", () => {
 
 const activitylist = [
   "$info for help | (~'-')~♥",
-  "Last update: 21/05/2019",
+  "Last update: 25/05/2019",
   "$eidolons for full eido list",
   "Eternia coming soon (๑•́ω•̀)",
   "checkout Yagi for wb times!"
@@ -83,7 +83,7 @@ amaterasu.on("ready", () => {
   }, 120000);
   //DiscordBot List server count
   setInterval(() => {
-    //dbl.postStats(amaterasu.guilds.size);
+    dbl.postStats(amaterasu.guilds.size);
   }, 1200000);
 });
 
