@@ -49,6 +49,7 @@ const eidolons = [
   `Nazrudin`,
   `Nidhogg`,
   `Pandora`,
+  `Qingniao`,
   `Quelkulan`,
   `Santa Ayako`,
   `Santa Tyr`,
@@ -81,7 +82,7 @@ module.exports = {
     const embed = {
       description: `${
         message.author
-      } | There are currently [74](http://www.aurakingdom-db.com/eidolons) Eidolons available in Aura Kingdom OS`,
+      } | There are currently [75](http://www.aurakingdom-db.com/eidolons) Eidolons available in Aura Kingdom OS`,
       color: 1493680,
       fields: [
         {
