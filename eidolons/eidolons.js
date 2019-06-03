@@ -23,6 +23,7 @@ const eidolons = [
   `Endora`,
   `Eternia`,
   `Faust`,
+  `Festival Muramasa`,
   `Ghodroon`,
   `Gigas`,
   `Grimm`,
@@ -82,7 +83,7 @@ module.exports = {
     const embed = {
       description: `${
         message.author
-      } | There are currently [75](http://www.aurakingdom-db.com/eidolons) Eidolons available in Aura Kingdom OS`,
+      } | There are currently [76](http://www.aurakingdom-db.com/eidolons) Eidolons available in Aura Kingdom OS`,
       color: 1493680,
       fields: [
         {
