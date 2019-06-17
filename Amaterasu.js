@@ -1,19 +1,19 @@
-const fs = require("fs");
-const Discord = require("discord.js");
-const { prefix, token, dbltoken } = require("./config.json");
-const sunDig = require("./eidolons/dig-sunday");
-const monDig = require("./eidolons/dig-monday");
-const tueDig = require("./eidolons/dig-tuesday");
-const wedDig = require("./eidolons/dig-wednesday");
-const thursDig = require("./eidolons/dig-thursday");
-const friDig = require("./eidolons/dig-friday");
-const satDig = require("./eidolons/dig-saturday");
-const sunFish = require("./eidolons/fish-sunday");
-const monFish = require("./eidolons/fish-monday");
-const wedFish = require("./eidolons/fish-wednesday");
-const thursFish = require("./eidolons/fish-thursday");
-const friFish = require("./eidolons/fish-friday");
-const satFish = require("./eidolons/fish-saturday");
+const fs = require('fs');
+const Discord = require('discord.js');
+const { prefix, token, dbltoken } = require('./config.json');
+const sunDig = require('./eidolons/dig-sunday');
+const monDig = require('./eidolons/dig-monday');
+const tueDig = require('./eidolons/dig-tuesday');
+const wedDig = require('./eidolons/dig-wednesday');
+const thursDig = require('./eidolons/dig-thursday');
+const friDig = require('./eidolons/dig-friday');
+const satDig = require('./eidolons/dig-saturday');
+const sunFish = require('./eidolons/fish-sunday');
+const monFish = require('./eidolons/fish-monday');
+const wedFish = require('./eidolons/fish-wednesday');
+const thursFish = require('./eidolons/fish-thursday');
+const friFish = require('./eidolons/fish-friday');
+const satFish = require('./eidolons/fish-saturday');
 const sundayD = sunDig.day;
 const mondayD = monDig.day;
 const tuesdayD = tueDig.day;
@@ -30,35 +30,35 @@ const saturdayF = satFish.day;
 
 const amaterasu = new Discord.Client();
 amaterasu.commands = new Discord.Collection();
-const DBL = require("dblapi.js");
+const DBL = require('dblapi.js');
 const dbl = new DBL(dbltoken, amaterasu);
 
 const commandFiles = fs
-  .readdirSync("./eidolons")
-  .filter(file => file.endsWith(".js"));
+  .readdirSync('./eidolons')
+  .filter(file => file.endsWith('.js'));
 
 for (const file of commandFiles) {
   const command = require(`./eidolons/${file}`);
   amaterasu.commands.set(command.name, command);
 }
 
-amaterasu.once("ready", () => {
-  console.log("Ready!");
+amaterasu.once('ready', () => {
+  console.log('Ready!');
 });
 
 const activitylist = [
-  "$info for help | (~'-')~♥",
-  "Last update: 03/06/2019",
-  "$eidolons for full eido list",
-  "Eternia coming soon (๑•́ω•̀)",
-  "checkout Yagi for wb times!"
+  "$ama-info for help | (~'-')~♥",
+  'Last update: 17/06/2019',
+  '$ama-eidolons for full eido list',
+  'Eternia coming soon (๑•́ω•̀)',
+  'checkout Yagi for wb times!'
 ];
 // REMINDER TO REFACTOR ALL THIS BEFORE Q3 2019 CUZ THIS IS A CLUSTERFCK RIGHT NOW
-amaterasu.on("ready", () => {
+amaterasu.on('ready', () => {
   amaterasu.user.setActivity(activitylist[0]);
-  let gaychat = amaterasu.channels.get("188682169495977984"); //Gayhouse - gaychat
+  let gaychat = amaterasu.channels.get('188682169495977984'); //Gayhouse - gaychat
   amaterasu.channels.forEach(chan => {
-    console.log(chan.id + " : " + chan.name); // Channels + Id List
+    console.log(chan.id + ' : ' + chan.name); // Channels + Id List
   });
   let count = 0;
   amaterasu.users.forEach(item => {
@@ -89,7 +89,7 @@ amaterasu.on("ready", () => {
 
 amaterasu.login(token);
 
-amaterasu.on("message", message => {
+amaterasu.on('message', message => {
   //custom reactions without @
   if (message.content.includes("Rio's not here")) {
     message.channel.startTyping();
@@ -102,20 +102,20 @@ amaterasu.on("message", message => {
   }
   //custom reaction with @
   if (
-    (message.author.username === "Vexuas" &&
-      message.content.includes("hello") &&
+    (message.author.username === 'Vexuas' &&
+      message.content.includes('hello') &&
       message.content.includes(amaterasu.user)) ||
-    (message.author.username === "Vexuas" &&
-      message.content.includes("hi") &&
+    (message.author.username === 'Vexuas' &&
+      message.content.includes('hi') &&
       message.content.includes(amaterasu.user))
   ) {
     message.channel.startTyping();
     setTimeout(() => {
-      message.channel.send("Hi hi, Master Vex! (˶◕‿◕˶✿)");
+      message.channel.send('Hi hi, Master Vex! (˶◕‿◕˶✿)');
     }, 1000);
     return message.channel.stopTyping();
   } else if (
-    message.author.username === "Catalina" &&
+    message.author.username === 'Catalina' &&
     message.content.includes(amaterasu.user)
   ) {
     message.channel.startTyping();
@@ -124,20 +124,20 @@ amaterasu.on("message", message => {
     }, 1000);
     return message.channel.stopTyping();
   } else if (
-    (message.author.username === "Rio" &&
-      message.content.includes("hello") &&
+    (message.author.username === 'Rio' &&
+      message.content.includes('hello') &&
       message.content.includes(amaterasu.user)) ||
-    (message.author.username === "Rio" &&
-      message.content.includes("hi") &&
+    (message.author.username === 'Rio' &&
+      message.content.includes('hi') &&
       message.content.includes(amaterasu.user))
   ) {
     message.channel.startTyping();
     setTimeout(() => {
-      message.channel.send("Oh hello, ArmRest-chan (˶◕‿◕˶✿)");
+      message.channel.send('Oh hello, ArmRest-chan (˶◕‿◕˶✿)');
     }, 1000);
     return message.channel.stopTyping();
   } else if (
-    message.author.username !== "Vexuas" &&
+    message.author.username !== 'Vexuas' &&
     message.content.includes(amaterasu.user)
   ) {
     message.channel.startTyping();
@@ -149,42 +149,42 @@ amaterasu.on("message", message => {
 
   if (
     (message.content.includes(amaterasu.user) &&
-      message.content.includes("are you okay")) ||
+      message.content.includes('are you okay')) ||
     (message.content.includes(amaterasu.user) &&
-      message.content.includes("are you alright"))
+      message.content.includes('are you alright'))
   ) {
     message.channel.startTyping();
     setTimeout(() => {
       message.channel.send(
-        "Is anybody actually ever okay in this world? (◕︿◕✿)"
+        'Is anybody actually ever okay in this world? (◕︿◕✿)'
       );
     }, 1000);
     return message.channel.stopTyping();
   } else if (
     (message.content.includes(amaterasu.user) &&
-      message.content.includes("sorry")) ||
+      message.content.includes('sorry')) ||
     (message.content.includes(amaterasu.user) &&
-      message.content.includes("apologise"))
+      message.content.includes('apologise'))
   ) {
     message.channel.startTyping();
     setTimeout(() => {
       message.channel.send(
         "It's okay Master " +
           message.author.username +
-          ", I forgive you. （；・д・）"
+          ', I forgive you. （；・д・）'
       );
     }, 1000);
     return message.channel.stopTyping();
   } else if (
     (message.content.includes(amaterasu.user) &&
-      message.content.includes("thank you")) ||
+      message.content.includes('thank you')) ||
     (message.content.includes(amaterasu.user) &&
-      message.content.includes("thanks"))
+      message.content.includes('thanks'))
   ) {
     message.channel.startTyping();
     setTimeout(() => {
       message.channel.send(
-        "You're nice, Master " + message.author.username + ". (๑>ᴗ<๑)"
+        "You're nice, Master " + message.author.username + '. (๑>ᴗ<๑)'
       );
     }, 1000);
     return message.channel.stopTyping();
@@ -194,7 +194,7 @@ amaterasu.on("message", message => {
       message.channel.send(
         "Amaterasu doesn't like being pinged, Master " +
           message.author.username +
-          "!! (๑•̆૩•̆)"
+          '!! (๑•̆૩•̆)'
       );
     }, 1000);
     return message.channel.stopTyping();
@@ -213,65 +213,65 @@ amaterasu.on("message", message => {
   //Returns a full Date Object of server time
   const serverTime = new Date(gameTime);
   //Format to only time string; 06:42 AM
-  const ServerTime = serverTime.toLocaleTimeString("en-US", {
-    hour: "2-digit",
-    minute: "2-digit"
+  const ServerTime = serverTime.toLocaleTimeString('en-US', {
+    hour: '2-digit',
+    minute: '2-digit'
   });
   //Gets day from Date Object, returns a number(0-6)
   const day = serverTime.getDay();
 
   //digging sites, transfered from dig.js to Amaterasu.js to solve servertime issues
-  if (message.content === "$dig") {
+  if (message.content === '$ama-dig') {
     let embed = {};
     if (day === 0) {
       embed = sundayD;
       embed.description =
         message.author +
-        " | ` Sunday, " +
+        ' | ` Sunday, ' +
         ServerTime +
-        "`\nArchaeology Prayer Sites Today";
+        '`\nArchaeology Prayer Sites Today';
     } else if (day === 1) {
       embed = mondayD;
       embed.description =
         message.author +
-        " | ` Monday, " +
+        ' | ` Monday, ' +
         ServerTime +
-        "`\nArchaeology Prayer Sites Today";
+        '`\nArchaeology Prayer Sites Today';
     } else if (day === 2) {
       embed = tuesdayD;
       embed.description =
         message.author +
-        " | ` Tuesday, " +
+        ' | ` Tuesday, ' +
         ServerTime +
-        "`\nArchaeology Prayer Sites Today";
+        '`\nArchaeology Prayer Sites Today';
     } else if (day === 3) {
       embed = wednesdayD;
       embed.description =
         message.author +
-        " | ` Wednesday, " +
+        ' | ` Wednesday, ' +
         ServerTime +
-        "`\nArchaeology Prayer Sites Today";
+        '`\nArchaeology Prayer Sites Today';
     } else if (day === 4) {
       embed = thursdayD;
       embed.description =
         message.author +
-        " | ` Thursday, " +
+        ' | ` Thursday, ' +
         ServerTime +
-        "`\nArchaeology Prayer Sites Today";
+        '`\nArchaeology Prayer Sites Today';
     } else if (day === 5) {
       embed = fridayD;
       embed.description =
         message.author +
-        " | ` Friday, " +
+        ' | ` Friday, ' +
         ServerTime +
-        "`\nArchaeology Prayer Sites Today";
+        '`\nArchaeology Prayer Sites Today';
     } else if (day === 6) {
       embed = saturdayD;
       embed.description =
         message.author +
-        " | ` Saturday, " +
+        ' | ` Saturday, ' +
         ServerTime +
-        "`\nArchaeology Prayer Sites Today";
+        '`\nArchaeology Prayer Sites Today';
     }
     message.channel.startTyping();
     setTimeout(() => {
@@ -281,27 +281,27 @@ amaterasu.on("message", message => {
   }
 
   //fishing sites
-  if (message.content === "$fish") {
+  if (message.content === '$ama-fish') {
     let embed = {};
     if (day === 0) {
       embed = sundayF;
       embed.description =
         message.author +
-        " | ` Sunday, " +
+        ' | ` Sunday, ' +
         ServerTime +
-        "`\nFish King Prayer Locations Today";
+        '`\nFish King Prayer Locations Today';
     } else if (day === 1) {
       embed = mondayF;
       embed.description =
         message.author +
-        " | ` Monday, " +
+        ' | ` Monday, ' +
         ServerTime +
-        "`\nFish King Prayer Locations Today";
+        '`\nFish King Prayer Locations Today';
     } else if (day === 2) {
       message.channel.startTyping();
       setTimeout(() => {
         message.channel.send(
-          "No Fish King Prayers Today (´･ᴗ･`) " + message.author
+          'No Fish King Prayers Today (´･ᴗ･`) ' + message.author
         );
       }, 1000);
       return message.channel.stopTyping();
@@ -309,30 +309,30 @@ amaterasu.on("message", message => {
       embed = wednesdayF;
       embed.description =
         message.author +
-        " | ` Wednesday, " +
+        ' | ` Wednesday, ' +
         ServerTime +
-        "`\nFish King Prayer Locations Today";
+        '`\nFish King Prayer Locations Today';
     } else if (day === 4) {
       embed = thursdayF;
       embed.description =
         message.author +
-        " | ` Thursday, " +
+        ' | ` Thursday, ' +
         ServerTime +
-        "`\nFish King Prayer Locations Today";
+        '`\nFish King Prayer Locations Today';
     } else if (day === 5) {
       embed = fridayF;
       embed.description =
         message.author +
-        " | ` Friday, " +
+        ' | ` Friday, ' +
         ServerTime +
-        "`\nFish King Prayer Locations Today";
+        '`\nFish King Prayer Locations Today';
     } else if (day === 6) {
       embed = saturdayF;
       embed.description =
         message.author +
-        " | ` Saturday, " +
+        ' | ` Saturday, ' +
         ServerTime +
-        "`\nFish King Prayer Locations Today";
+        '`\nFish King Prayer Locations Today';
     }
     message.channel.startTyping();
     setTimeout(() => {
@@ -348,7 +348,7 @@ amaterasu.on("message", message => {
   //if command doesn't exist, show error message
   if (!amaterasu.commands.has(command))
     return message.channel.send(
-      "Master " +
+      'Master ' +
         message.author.username +
         ", I'm not sure what you meant by that! （・□・；）"
     );
