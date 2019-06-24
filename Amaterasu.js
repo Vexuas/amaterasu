@@ -33,17 +33,19 @@ amaterasu.commands = new Discord.Collection();
 const DBL = require('dblapi.js');
 const dbl = new DBL(dbltoken, amaterasu);
 
-const commandFiles = fs
-  .readdirSync('./eidolons')
-  .filter(file => file.endsWith('.js'));
+const commandFolder = fs.readdirSync('./commands/');
 
-for (const file of commandFiles) {
-  const command = require(`./eidolons/${file}`);
-  amaterasu.commands.set(command.name, command);
+for (const folder of commandFolder) {
+  const commandFiles = fs
+    .readdirSync(`./commands/${folder}`)
+    .filter(file => file.endsWith('.js'));
+  for (const file of commandFiles) {
+    const command = require(`./commands/${folder}/${file}`);
+    amaterasu.commands.set(command.name, command);
+  }
 }
-
 amaterasu.once('ready', () => {
-  console.log('Ready!');
+  console.log('Ready! (˶◕‿◕˶✿)');
 });
 
 const activitylist = [
@@ -54,6 +56,7 @@ const activitylist = [
   'checkout Yagi for wb times!'
 ];
 // REMINDER TO REFACTOR ALL THIS BEFORE Q3 2019 CUZ THIS IS A CLUSTERFCK RIGHT NOW
+// 5 more days, maybe I'll make it?
 amaterasu.on('ready', () => {
   amaterasu.user.setActivity(activitylist[0]);
   let gaychat = amaterasu.channels.get('188682169495977984'); //Gayhouse - gaychat
