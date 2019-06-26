@@ -1,19 +1,19 @@
 const fs = require('fs');
 const Discord = require('discord.js');
 const { prefix, token, dbltoken } = require('./config.json');
-const sunDig = require('./eidolons/dig-sunday');
-const monDig = require('./eidolons/dig-monday');
-const tueDig = require('./eidolons/dig-tuesday');
-const wedDig = require('./eidolons/dig-wednesday');
-const thursDig = require('./eidolons/dig-thursday');
-const friDig = require('./eidolons/dig-friday');
-const satDig = require('./eidolons/dig-saturday');
-const sunFish = require('./eidolons/fish-sunday');
-const monFish = require('./eidolons/fish-monday');
-const wedFish = require('./eidolons/fish-wednesday');
-const thursFish = require('./eidolons/fish-thursday');
-const friFish = require('./eidolons/fish-friday');
-const satFish = require('./eidolons/fish-saturday');
+const sunDig = require('./commands/archaeology_days/dig-sunday');
+const monDig = require('./commands/archaeology_days/dig-monday');
+const tueDig = require('./commands/archaeology_days/dig-tuesday');
+const wedDig = require('./commands/archaeology_days/dig-wednesday');
+const thursDig = require('./commands/archaeology_days/dig-thursday');
+const friDig = require('./commands/archaeology_days/dig-friday');
+const satDig = require('./commands/archaeology_days/dig-saturday');
+const sunFish = require('./commands/fishking_days/fish-sunday');
+const monFish = require('./commands/fishking_days/fish-monday');
+const wedFish = require('./commands/fishking_days/fish-wednesday');
+const thursFish = require('./commands/fishking_days/fish-thursday');
+const friFish = require('./commands/fishking_days/fish-friday');
+const satFish = require('./commands/fishking_days/fish-saturday');
 const sundayD = sunDig.day;
 const mondayD = monDig.day;
 const tuesdayD = tueDig.day;
@@ -33,27 +33,30 @@ amaterasu.commands = new Discord.Collection();
 const DBL = require('dblapi.js');
 const dbl = new DBL(dbltoken, amaterasu);
 
-const commandFiles = fs
-  .readdirSync('./eidolons')
-  .filter(file => file.endsWith('.js'));
+const commandFolder = fs.readdirSync('./commands/');
 
-for (const file of commandFiles) {
-  const command = require(`./eidolons/${file}`);
-  amaterasu.commands.set(command.name, command);
+for (const folder of commandFolder) {
+  const commandFiles = fs
+    .readdirSync(`./commands/${folder}`)
+    .filter(file => file.endsWith('.js'));
+  for (const file of commandFiles) {
+    const command = require(`./commands/${folder}/${file}`);
+    amaterasu.commands.set(command.name, command);
+  }
 }
-
 amaterasu.once('ready', () => {
-  console.log('Ready!');
+  console.log('Ready! (˶◕‿◕˶✿)');
 });
 
 const activitylist = [
   "$ama-info for help | (~'-')~♥",
-  'Last update: 17/06/2019',
+  'Last update: 26/06/2019',
   '$ama-eidolons for full eido list',
   'Eternia coming soon (๑•́ω•̀)',
   'checkout Yagi for wb times!'
 ];
 // REMINDER TO REFACTOR ALL THIS BEFORE Q3 2019 CUZ THIS IS A CLUSTERFCK RIGHT NOW
+// 5 more days, maybe I'll make it?
 amaterasu.on('ready', () => {
   amaterasu.user.setActivity(activitylist[0]);
   let gaychat = amaterasu.channels.get('188682169495977984'); //Gayhouse - gaychat
