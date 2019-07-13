@@ -59,6 +59,8 @@ const eidolons = [
   `Shirayuki`,
   `Sigrun`,
   `Succubus`,
+  `Summer Alucard`,
+  `Summer Nidhogg`,
   `Tanith`,
   `Tigerius Caesar`,
   `Tsubaki`,
@@ -77,22 +79,22 @@ const eidolons = [
   `Zephyrine`
 ];
 module.exports = {
-  name: "eidolons",
-  description: "eidolon list",
+  name: 'eidolons',
+  description: 'eidolon list',
   execute(message, args) {
     const embed = {
       description: `${
         message.author
-      } | There are currently [76](http://www.aurakingdom-db.com/eidolons) Eidolons available in Aura Kingdom OS`,
+      } | There are currently [78](http://www.aurakingdom-db.com/eidolons) Eidolons available in Aura Kingdom OS`,
       color: 1493680,
       fields: [
         {
-          name: "Full Eidolon List",
+          name: 'Full Eidolon List',
           value: `| ${eidolons
             .map(item => {
-              return "`" + item + "`";
+              return '`' + item + '`';
             })
-            .join(" | ")} |`
+            .join(' | ')} |`
         }
       ]
     };
