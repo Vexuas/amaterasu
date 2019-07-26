@@ -20,6 +20,7 @@ const eidolons = [
   `Diao Chan`,
   `Eirene`,
   `Eligos`,
+  `Elizabeth`,
   `Endora`,
   `Eternia`,
   `Faust`,
@@ -85,7 +86,7 @@ module.exports = {
     const embed = {
       description: `${
         message.author
-      } | There are currently [78](http://www.aurakingdom-db.com/eidolons) Eidolons available in Aura Kingdom OS`,
+      } | There are currently [79](http://www.aurakingdom-db.com/eidolons) Eidolons available in Aura Kingdom OS`,
       color: 1493680,
       fields: [
         {
