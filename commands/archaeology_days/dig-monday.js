@@ -2,68 +2,75 @@ const embed = {
   color: 1493680,
   fields: [
     {
-      name: "Cerberus & Diao Chan",
+      name: 'Cerberus & Diao Chan',
       value:
-        "```fix\n• 2nd & 5th Wish       \n• Emerald Marsh,\n  Frigga Peak\n• Blue```"
-    },
-    {
-      name: "Qingniao",
-      value: "```fix\n• 1st Wish              \n• Port Skandia\n• Yellow```",
+        '```fix\n• 2nd & 5th Wish       \n• Emerald Marsh,\n  Frigga Peak\n• Blue```',
       inline: true
     },
     {
-      name: "Santa Ayako",
-      value: "```fix\n• 6th Wish             \n• Candeo Marsh\n• Blue```",
-      inline: true
-    },
-    {
-      name: "Grimm",
+      name: 'Elizabeth',
       value:
-        "```fix\n• 1st Wish             \n• Demarech Mines,\n  Star Sand Desert\n• Yellow```",
+        '```fix\n• 5th Wish              \n• Candeo Marsh, \n  Blizzard Berg\n• Blue, Red```',
       inline: true
     },
     {
-      name: "Quelkulan",
+      name: 'Qingniao',
+      value: '```fix\n• 1st Wish              \n• Port Skandia\n• Yellow```',
+      inline: true
+    },
+    {
+      name: 'Santa Ayako',
+      value: '```fix\n• 6th Wish              \n• Candeo Marsh\n• Blue```',
+      inline: true
+    },
+    {
+      name: 'Grimm',
       value:
-        "```fix\n• 6th Wish             \n• Emerald Marsh,\n  Frigga Peak \n• Red ```",
+        '```fix\n• 1st Wish             \n• Demarech Mines,\n  Star Sand Desert\n• Yellow```',
       inline: true
     },
     {
-      name: "Aelius, Benkei & Kitami",
-      value: "```fix\n• 4th & 6th Wish       \n• Port Skandia\n• Red```",
+      name: 'Quelkulan',
+      value:
+        '```fix\n• 6th Wish             \n• Emerald Marsh,\n  Frigga Peak \n• Red ```',
       inline: true
     },
     {
-      name: "Nalani & Uzuriel",
-      value: "```fix\n• 6th Wish             \n• Starstruck Plateau\n• Blue```",
+      name: 'Aelius, Benkei & Kitami',
+      value: '```fix\n• 4th & 6th Wish       \n• Port Skandia\n• Red```',
       inline: true
     },
     {
-      name: "Nazrudin",
-      value: "```fix\n• 4th Wish             \n• Cactakara Forest\n• Blue```",
+      name: 'Nalani & Uzuriel',
+      value: '```fix\n• 6th Wish             \n• Starstruck Plateau\n• Blue```',
       inline: true
     },
     {
-      name: "Serena",
-      value: "```fix\n• 3rd Wish             \n• Candeo Marsh\n• Yellow```",
+      name: 'Nazrudin',
+      value: '```fix\n• 4th Wish             \n• Cactakara Forest\n• Blue```',
       inline: true
     },
     {
-      name: "Zashi",
-      value: "```fix\n• 6th Wish             \n• Crescent Hill\n• Yellow```",
+      name: 'Serena',
+      value: '```fix\n• 3rd Wish             \n• Candeo Marsh\n• Yellow```',
       inline: true
     },
     {
-      name: "Hebe",
-      value: "```fix\n• 1st Wish             \n• Candeo Marsh\n• Red```",
+      name: 'Zashi',
+      value: '```fix\n• 6th Wish             \n• Crescent Hill\n• Yellow```',
+      inline: true
+    },
+    {
+      name: 'Hebe',
+      value: '```fix\n• 1st Wish             \n• Candeo Marsh\n• Red```',
       inline: true
     }
   ]
 };
 
 module.exports = {
-  name: "dig monday",
-  description: "digging sites for eidolons",
+  name: 'dig monday',
+  description: 'digging sites for eidolons',
   day: embed,
   execute(message, args) {
     (embed.description = `${
