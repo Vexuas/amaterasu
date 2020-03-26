@@ -1,6 +1,6 @@
 {
   "name": "amaterasu",
-  "version": "1.83",
+  "version": "1.83.0",
   "description": "Eidolon Bot for Aura Kingdom",
   "main": "Amaterasu.js",
   "author": "Vexuas",
@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "babel-eslint": "^8.2.6",
-    "eslint": "^4.19.1"
+    "eslint": "^4.19.1",
+    "nodemon": "^2.0.2"
   }
 }
